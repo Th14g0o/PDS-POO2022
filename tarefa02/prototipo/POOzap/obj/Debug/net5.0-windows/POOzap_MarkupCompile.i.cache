@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\20211011110014\source\repos\prototipo\POOzap\obj\Debug\net5.0-windows\
+C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\obj\Debug\net5.0-windows\
 POOzap
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\20211011110014\source\repos\prototipo\POOzap\App.xaml
+C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\App.xaml
 6996203055
 
 10-1586655772
 193-1891726104
 ContatosWindow.xaml;GruposWindow.xaml;ListarGruposWindow.xaml;ListarMembrosWindow.xaml;MainWindow.xaml;VincularWindow.xaml;
 
-True
+False
 
