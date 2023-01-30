@@ -58,7 +58,7 @@ C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\obj\Debug\net5.0-windo
 C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\obj\Debug\net5.0-windows\POOzap.AssemblyInfo.cs
 C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\obj\Debug\net5.0-windows\POOzap.csproj.CoreCompileInputs.cache
 C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\obj\Debug\net5.0-windows\POOzap.dll
-C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\obj\Debug\net5.0-windows\refint\POOzap.dll
 C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\obj\Debug\net5.0-windows\POOzap.pdb
 C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\obj\Debug\net5.0-windows\POOzap.genruntimeconfig.cache
 C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\obj\Debug\net5.0-windows\ref\POOzap.dll
+C:\PDD\ProjetoDeDesenvolvimento\tarefa02\prototipo\POOzap\bin\Debug\net5.0-windows\ref\POOzap.dll

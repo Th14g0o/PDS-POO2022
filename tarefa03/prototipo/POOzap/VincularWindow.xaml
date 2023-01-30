@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <ListBox Grid.Row="0" Grid.Column="0" Margin="15px"/>
         <ListBox Grid.Row="0" Grid.Column="1" Margin="15px"/>
-        <Button Content="VINCULAR" Grid.Row="1" Grid.Column="0" Margin="15px"/>
-        <Button Content="RETIRAR DO GRUPO" Grid.Row="1" Grid.Column="1" Margin="15px"/>
+        <Button Content="VINCULAR" Grid.Row="1" Grid.Column="0" Margin="15px" Grid.ColumnSpan="2"/>
+        
     </Grid>
 </Window>
