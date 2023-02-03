@@ -41,7 +41,33 @@ namespace POOzap
             {
                 contatos = new List<Contato>();
             }
-            if (f != null)f.Close();
+            if (f != null) f.Close();
+        }
+
+        public static Contato Checar(int id)
+        {
+            foreach (Contato c in contatos)
+            {
+                if (c.Id == id) return c;
+            }
+            return null;
+        }
+
+        public static void Excluir(Contato c)
+        {
+            Abrir();
+            contatos.Remove(Checar(c.Id));
+            Salvar();
+        }
+
+        public static void Atualizar(Contato c)
+        {
+            Abrir();
+            Contato obj = Checar(c.Id);
+            obj.Nome = c.Nome;
+            obj.Recado = c.Recado;
+            obj.Telefone = c.Telefone;
+            Salvar();
         }
 
     }

@@ -8,19 +8,19 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\20211011110014\\.nuget\\packages\\": {}
+    "C:\\Users\\20211011110012\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PDD\\ProjetoDeDesenvolvimento\\tarefa03\\prototipo\\POOzap\\POOzap.csproj",
+      "projectUniqueName": "C:\\BRASIL\\ProjetoDeDesenvolvimento\\tarefa03\\prototipo\\POOzap\\POOzap.csproj",
       "projectName": "POOzap",
-      "projectPath": "C:\\PDD\\ProjetoDeDesenvolvimento\\tarefa03\\prototipo\\POOzap\\POOzap.csproj",
-      "packagesPath": "C:\\Users\\20211011110014\\.nuget\\packages\\",
-      "outputPath": "C:\\PDD\\ProjetoDeDesenvolvimento\\tarefa03\\prototipo\\POOzap\\obj\\",
+      "projectPath": "C:\\BRASIL\\ProjetoDeDesenvolvimento\\tarefa03\\prototipo\\POOzap\\POOzap.csproj",
+      "packagesPath": "C:\\Users\\20211011110012\\.nuget\\packages\\",
+      "outputPath": "C:\\BRASIL\\ProjetoDeDesenvolvimento\\tarefa03\\prototipo\\POOzap\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\20211011110014\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\20211011110012\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }
