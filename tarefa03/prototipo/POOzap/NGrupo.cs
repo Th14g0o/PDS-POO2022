@@ -38,7 +38,7 @@ namespace POOzap
             try
             {
                 XmlSerializer x = new XmlSerializer(typeof(List<Grupo>));
-                f = new StreamReader("./grupos.xml", false);
+                f = new StreamReader("./grupos.xml");
                 grupos = (List<Grupo>) x.Deserialize(f);
             }
             catch

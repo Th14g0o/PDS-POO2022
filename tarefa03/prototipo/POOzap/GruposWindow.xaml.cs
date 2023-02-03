@@ -23,5 +23,62 @@ namespace POOzap
         {
             InitializeComponent();
         }
+
+        private void inserir_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Grupo g = new Grupo { Descricao = descG.Text, Id = int.Parse(idG.Text), Nome = nomeG.Text };
+                NGrupo.Inserir(g);
+                listar_Click(sender, e) ;
+            }
+            catch
+            {
+                MessageBox.Show("Digite um numero no ID");
+            }
+        }
+
+        private void listar_Click(object sender, RoutedEventArgs e)
+        {
+            todosG.ItemsSource = null;
+            todosG.ItemsSource = NGrupo.Listar();
+        }
+
+        private void excluir_Click(object sender, RoutedEventArgs e)
+        {
+            if (todosG.SelectedItem != null)
+            {
+                NGrupo.Excluir((Grupo)todosG.SelectedItem);
+                listar_Click(sender, e);
+            }
+            else
+                MessageBox.Show("Selecione um grupo!");
+        }
+
+        private void atualizar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Grupo g = new Grupo { Descricao = descG.Text, Id = int.Parse(idG.Text), Nome = nomeG.Text };
+                NGrupo.Atualizar(g);
+                listar_Click(sender, e);
+            }
+            catch
+            {
+                MessageBox.Show("Digite as informações!");
+            }
+        }
+
+        private void todosG_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Grupo x = (Grupo) todosG.SelectedItem;
+            if (x != null)
+            {
+                descG.Text = x.Descricao;
+                idG.Text = x.Id.ToString();
+                nomeG.Text = x.Nome;
+            }
+            
+        }
     }
 }
