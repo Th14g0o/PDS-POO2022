@@ -22,6 +22,23 @@ namespace POOzap
         public VincularWindow()
         {
             InitializeComponent();
+            grupos.ItemsSource = null;
+            grupos.ItemsSource = NGrupo.Listar();
+            contatos.ItemsSource = null;
+            contatos.ItemsSource = NContato.Listar();
+        }
+        private void vincular_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Grupo g = (Grupo) grupos.SelectedItem;
+                Contato c = (Contato) contatos.SelectedItem;
+                NMembro.Adicionar(c, g);
+            }
+            catch
+            {
+                MessageBox.Show("Selecione um grupo e um contato");
+            }
         }
     }
 }

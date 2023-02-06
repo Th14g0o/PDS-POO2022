@@ -51,6 +51,12 @@ namespace POOzap
                 if (m.Id == id) return m;
             return null;
         }
+        public static Membro Checar(Contato c)
+        {
+            foreach (Membro m in membros)
+                if (m.IdContato == c.Id) return m;
+            return null;
+        }
         public static void Atualizar(Membro m)
         {
             Abrir();
@@ -60,9 +66,10 @@ namespace POOzap
             obj.IdContato = m.IdContato;
             Salvar();
         }
-        public static void Excluir(Membro m)
+        public static void Excluir(Contato c)
         {
             Abrir();
+            Membro m = Checar(c);
             membros.Remove(Checar(m.Id));
             Salvar();
         }
@@ -70,15 +77,31 @@ namespace POOzap
 
         public static void Adicionar(Contato c, Grupo g)
         {
+            Abrir();
             Membro m = new Membro { IdContato = c.Id, IdGrupo = g.Id, Adm = false};
-            NMembro.Inserir(m);     
+            if(membros.IndexOf(m) == -1)
+            {
+                Inserir(m);
+                Salvar();
+            }
         }
-        public static List<Membro> Listar(Grupo g)
+        public static List<Contato> Listar(Grupo g)
         {
+            List<Contato> cs = new List<Contato>();
             List<Membro> ms = new List<Membro>();
             foreach (Membro m in Listar())
                 if (m.IdGrupo == g.Id) ms.Add(m);
-            return ms;
+            foreach (Contato c in NContato.Listar())
+            {
+                foreach (Membro m in ms)
+                {
+                    if (m.IdContato == c.Id && cs.IndexOf(c) == -1)
+                    {
+                        cs.Add(c);
+                    }
+                }
+            }
+            return cs;
         }
         public static List<Grupo> Listar(Contato c)
         {

@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace POOzap
 {
-    internal class Membro
+    public class Membro
     {
         public int Id { get; set; }
         public int IdGrupo { get; set; }
         public int IdContato { get; set; }
         public bool Adm { get; set; }
+ 
         public override string ToString()
         {
             if (Adm == true)
-                return "Administrador";
+                return $"[Administrador]";
             else
-                return null;
+                return $"[Não é administrador]";
         }
     }
 }

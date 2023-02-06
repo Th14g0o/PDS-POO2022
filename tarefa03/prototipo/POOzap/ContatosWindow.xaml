@@ -25,18 +25,17 @@
         <TextBlock Text="Telefone"  Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBlock Text="Recado:"  Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBlock Text="Id"  Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        
-        <TextBox Text="" Grid.Column="1" Grid.ColumnSpan="2" Margin="15"/>
-        <TextBox Text="" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" Margin="15"/>
-        <TextBox Text="" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" Margin="15"/>
-        <TextBox Text="" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="3" Margin="15"/>
-        
-        <ListBox Grid.Column="3" Grid.RowSpan="4" Margin="15"/>
-        
-        <Button Content="INSERIR" Grid.Row="4" Margin="10 ,25"/>
-        
-        <Button Content="ATUALIZAR" Grid.Column="1" Grid.Row="4" Margin="10 ,25"/>
-        <Button Content="EXCLUIR" Grid.Column="2" Grid.Row="4" Margin="10 ,25"/>
-        <Button Content="LISTAR" Grid.Column="3" Grid.Row="4" Margin="10 ,25"/>
+
+        <TextBox x:Name="nomeC" Text="" Grid.Column="1" Grid.ColumnSpan="2" Margin="15"/>
+        <TextBox x:Name="telefoneC"  Text="" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" Margin="15"/>
+        <TextBox x:Name="recadoC"  Text="" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" Margin="15"/>
+        <TextBox x:Name="idC"  Text="" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="3" Margin="15"/>
+
+        <ListBox x:Name="todosC" Grid.Column="3" Grid.RowSpan="4" Margin="15" SelectionChanged="todosC_SelectionChanged"/>
+
+        <Button x:Name="inserirC" Content="INSERIR" Grid.Row="4" Margin="10 ,25" Click="inserirC_Click"/>
+        <Button x:Name="atualizarC" Content="ATUALIZAR" Grid.Column="1" Grid.Row="4" Margin="10 ,25" Click="atualizarC_Click"/>
+        <Button x:Name="excluirC" Content="EXCLUIR" Grid.Column="2" Grid.Row="4" Margin="10 ,25" Click="excluirC_Click"/>
+        <Button x:Name="listarC" Content="LISTAR" Grid.Column="3" Grid.Row="4" Margin="10 ,25" Click="listarC_Click"/>
     </Grid>
 </Window>

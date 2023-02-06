@@ -13,6 +13,7 @@ namespace POOzap
         private static List<Contato> contatos = new List<Contato>();
         public static List<Contato> Listar()
         {
+            Abrir();
             return contatos;
         }
 
@@ -20,6 +21,7 @@ namespace POOzap
         {
             Abrir();
             contatos.Add(c);
+            Salvar();
         }
         public static void Salvar()
         {
@@ -34,7 +36,7 @@ namespace POOzap
             try
             {
                 XmlSerializer x = new XmlSerializer(typeof(List<Contato>));
-                f = new StreamReader("./brasil", false);
+                f = new StreamReader("./brasil");
                 contatos = (List<Contato>)x.Deserialize(f);
             }
             catch
@@ -69,6 +71,7 @@ namespace POOzap
             obj.Telefone = c.Telefone;
             Salvar();
         }
+
 
     }
 }

@@ -15,9 +15,9 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ListBox Margin="10"/>
-        <ListBox Grid.Column="1" Margin="10"/>
-        
+        <ListBox x:Name="todosMG1" Margin="10"/>
+        <ListBox x:Name="todosMG2" Grid.Column="1" Margin="10"/>
+
         <GroupBox  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="{x:Null}">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -26,10 +26,10 @@
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Button Content="LISTAR"  Margin="10"/>
-                <Button Content="REMOVER MEMBRO" Grid.Column="1" Margin="10"/>
-                <Button Content="TORNAR ADM" Grid.Column="2" Margin="10"/>
-                <Button Content="REMOVER ADM" Grid.Column="3" Margin="10"/>
+                <Button x:Name="listarMG" Content="LISTAR"  Margin="10" Click="listarMG_Click"/>
+                <Button x:Name="removerMG" Content="REMOVER MEMBRO" Grid.Column="1" Margin="10" Click="removerMG_Click"/>
+                <Button x:Name="promoverMG" Content="TORNAR ADM" Grid.Column="2" Margin="10" Click="promoverMG_Click"/>
+                <Button x:Name="rebaixarMG" Content="REMOVER ADM" Grid.Column="3" Margin="10" Click="rebaixarMG_Click"/>
             </Grid>
         </GroupBox>
     </Grid>
