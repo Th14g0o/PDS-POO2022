@@ -1,0 +1,39 @@
+﻿<Window x:Class="POOzap.GruposWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POOzap"
+        mc:Ignorable="d"
+        Title="UADIZAPI" Height="450" Width="800" FontFamily="Comic Sans MS">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Nome"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="Descrição"  Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="Id"  Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        
+        <TextBox x:Name="nomeG" Text="" Grid.Column="1" Grid.ColumnSpan="2" Margin="15"/>
+        <TextBox x:Name="descG" Text="" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" Margin="15"/>
+        <TextBox x:Name="idG" Text="" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" Margin="15"/>
+        
+        <ListBox x:Name="todosG" Grid.Column="4" Grid.RowSpan="3" Margin="15" SelectionChanged="todosG_SelectionChanged"/>
+        
+        <Button x:Name="inserir" Content="INSERIR" Grid.Row="4" Margin="10 ,25" Click="inserir_Click"/>
+        
+        <Button x:Name="atualizar" Content="ATUALIZAR" Grid.Column="1" Grid.Row="4" Margin="10 ,25" Click="atualizar_Click"/>
+        <Button x:Name="excluir" Content="EXCLUIR" Grid.Column="2" Grid.Row="4" Margin="10 ,25" Click="excluir_Click"/>
+        <Button x:Name="listar" Content="LISTAR" Grid.Column="4" Grid.Row="4" Margin="10 ,25" Click="listar_Click"/>
+    </Grid>
+</Window>
