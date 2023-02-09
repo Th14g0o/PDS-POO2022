@@ -45,10 +45,10 @@ namespace POOzap
             }
             if (f != null) f.Close();
         }
-        public static Membro Checar(int id)
+        public static Membro Checar(Membro x)
         {
             foreach (Membro m in membros)
-                if (m.Id == id) return m;
+                if (m.IdContato == x.IdContato && x.IdGrupo ==m.IdGrupo) return m;
             return null;
         }
         public static Membro Checar(Contato c)
@@ -57,10 +57,16 @@ namespace POOzap
                 if (m.IdContato == c.Id) return m;
             return null;
         }
+        public static Membro Checar(Grupo g)
+        {
+            foreach (Membro m in membros)
+                if (m.IdGrupo == g.Id) return m;
+            return null;
+        }
         public static void Atualizar(Membro m)
         {
             Abrir();
-            Membro obj = Checar(m.Id);
+            Membro obj = Checar(m);
             obj.Adm = m.Adm;
             obj.IdGrupo = m.IdGrupo;
             obj.IdContato = m.IdContato;
@@ -70,7 +76,14 @@ namespace POOzap
         {
             Abrir();
             Membro m = Checar(c);
-            membros.Remove(Checar(m.Id));
+            membros.Remove(Checar(m));
+            Salvar();
+        }
+        public static void Excluir(Grupo g)
+        {
+            Abrir();
+            Membro m = Checar(g);
+            membros.Remove(Checar(m));
             Salvar();
         }
 
@@ -81,7 +94,8 @@ namespace POOzap
             int n = 0;
             foreach (Membro x in membros)
             {
-                if (m.IdContato == x.IdContato && m.IdGrupo == x.IdGrupo)
+                if (m.IdContato == x.IdContato && m.IdGrupo == x.IdGrupo
+                    )
                 {
                     n++;
                     break;
@@ -96,10 +110,13 @@ namespace POOzap
         }
         public static List<Contato> Listar(Grupo g)
         {
+            Abrir();
             List<Contato> cs = new List<Contato>();
             List<Membro> ms = new List<Membro>();
-            foreach (Membro m in Listar())
+
+            foreach (Membro m in membros)
                 if (m.IdGrupo == g.Id) ms.Add(m);
+
             foreach (Contato c in NContato.Listar())
             {
                 foreach (Membro m in ms)
@@ -112,35 +129,54 @@ namespace POOzap
             }
             return cs;
         }
+        public static List<Membro> Adms(Grupo g)
+        {
+            Abrir();
+            List<Membro> ms = new List<Membro>();
+            foreach (Contato c in Listar(g))
+            {
+                foreach (Membro m in membros)
+                {
+                    if (c.Id == m.IdContato && g.Id == m.IdGrupo && ms.IndexOf(m) == -1)
+                        ms.Add(m);
+                }
+            }      
+            return ms;
+        }
         public static List<Grupo> Listar(Contato c)
         {
-            Membro m = new Membro{Id = -1, IdGrupo = -1};
-            foreach (Membro obj in Listar())
-                if (obj.IdContato == c.Id) m = obj;
-
+            Abrir();
             List<Grupo> gs = new List<Grupo>();
-            foreach (Grupo g in NGrupo.Listar())
-                if (g.Id == m.IdGrupo) gs.Add(g);
+            foreach (Membro m in membros)
+            {
+                foreach (Grupo g in NGrupo.Listar())
+                {
+                    if (m.IdGrupo == g.Id && m.IdContato == c.Id) gs.Add(g);
+                }
+            }
             
             return gs;
         }
 
-        public static void Promover(Contato c)
+        public static void Promover(Contato c, Grupo g)
         {
+            Abrir();
             foreach (Membro m in membros)
             {
-                if (c.Id == m.IdContato)
+                if (c.Id == m.IdContato && g.Id == m.IdGrupo)
                 {
                     m.Adm = true;
                     Atualizar(m);
                 }
             }
+
         }
-        public static void Rebaixar (Contato c)
+        public static void Rebaixar (Contato c, Grupo g)
         {
+            Abrir();
             foreach (Membro m in membros)
             {
-                if (c.Id == m.IdContato)
+                if (c.Id == m.IdContato && g.Id == m.IdGrupo)
                 {
                     m.Adm = false;
                     Atualizar(m);

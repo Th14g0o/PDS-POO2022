@@ -33,45 +33,51 @@ namespace POOzap
                 todosMG2.ItemsSource = null;
                 todosMG2.ItemsSource = NMembro.Listar((Grupo)todosMG1.SelectedItem);
                 adm.ItemsSource = null;
-                adm.ItemsSource = NMembro.Listar();
+                adm.ItemsSource = NMembro.Adms((Grupo)todosMG1.SelectedItem);
             }
             else
             {
                 todosMG2.ItemsSource = null;
                 todosMG2.ItemsSource = NContato.Listar();
-                adm.ItemsSource = null;
-                adm.ItemsSource = NMembro.Listar();
             }
         }
 
         private void removerMG_Click(object sender, RoutedEventArgs e)
         {
-            if (todosMG2.SelectedItem != null)
+            try
             {
-                Contato c = (Contato)todosMG2.SelectedItem;
-                if(c!= null)
+                if (todosMG2.SelectedItem != null)
                 {
-                    NMembro.Excluir(c);
-                    listarMG_Click(sender, e);
+                    Contato c = (Contato)todosMG2.SelectedItem;
+                    if (c != null)
+                    {
+                        NMembro.Excluir(c);
+                        listarMG_Click(sender, e);
+                    }
+
                 }
-               
             }
+            catch
+            {
+                MessageBox.Show("Selecione um grupo!");
+            }
+            
         }
 
         private void promoverMG_Click(object sender, RoutedEventArgs e)
         {
-            if (todosMG2.SelectedItem != null)
+            if (todosMG2.SelectedItem != null && todosMG1.SelectedItem != null)
             {
-                NMembro.Promover((Contato)todosMG2.SelectedItem);
+                NMembro.Promover((Contato)todosMG2.SelectedItem, (Grupo)todosMG1.SelectedItem);
                 listarMG_Click(sender, e);
             }
         }
 
         private void rebaixarMG_Click(object sender, RoutedEventArgs e)
         {
-            if (todosMG2.SelectedItem != null)
+            if (todosMG2.SelectedItem != null && todosMG1.SelectedItem != null)
             {
-                NMembro.Rebaixar((Contato)todosMG2.SelectedItem);
+                NMembro.Rebaixar((Contato)todosMG2.SelectedItem, (Grupo)todosMG1.SelectedItem);
                 listarMG_Click(sender, e);
             }
         }

@@ -131,7 +131,6 @@ C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\bin\Debug\net5.0-windo
 C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\bin\Debug\net5.0-windows\POOzap.runtimeconfig.json
 C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\bin\Debug\net5.0-windows\POOzap.runtimeconfig.dev.json
 C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\bin\Debug\net5.0-windows\POOzap.dll
-C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\bin\Debug\net5.0-windows\ref\POOzap.dll
 C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\bin\Debug\net5.0-windows\POOzap.pdb
 C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\obj\Debug\net5.0-windows\POOzap.csproj.AssemblyReference.cache
 C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\obj\Debug\net5.0-windows\ContatosWindow.g.cs
@@ -158,3 +157,4 @@ C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\obj\Debug\net5.0-windo
 C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\obj\Debug\net5.0-windows\ref\POOzap.dll
 C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\obj\Debug\net5.0-windows\POOzap.pdb
 C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\obj\Debug\net5.0-windows\POOzap.genruntimeconfig.cache
+C:\PDD\ProjetoDeDesenvolvimento\tarefa04\prototipo\POOzap\obj\Debug\net5.0-windows\refint\POOzap.dll

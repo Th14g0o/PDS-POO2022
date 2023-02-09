@@ -22,6 +22,34 @@ namespace POOzap
         public ListarGruposWindow()
         {
             InitializeComponent();
+            conts.ItemsSource = null;
+            conts.ItemsSource = NContato.Listar();
+        }
+
+        private void listar_Click(object sender, RoutedEventArgs e)
+        {
+            if (conts.SelectedItem != null)
+            {
+                Contato c = (Contato)conts.SelectedItem;
+                if (c != null)
+                {
+                    grups.ItemsSource = null;
+                    grups.ItemsSource = NMembro.Listar(c);
+                }
+            }
+        }
+
+        private void sair_Click(object sender, RoutedEventArgs e)
+        {
+            if (grups.SelectedItem != null)
+            {
+                Grupo g = (Grupo)grups.SelectedItem;
+                if (g != null)
+                {
+                    NMembro.Excluir(g);
+                    listar_Click(sender, e);
+                }
+            }
         }
     }
 }
