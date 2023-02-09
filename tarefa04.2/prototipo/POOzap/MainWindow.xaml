@@ -1,0 +1,17 @@
+﻿<Window x:Class="POOzap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POOzap"
+        mc:Ignorable="d"
+        Title="UADIZAPI" Height="450" Width="800" FontFamily="Comic Sans MS">
+    <Grid>
+        <TextBlock Text="UADIZAPI" FontSize="60" Margin="242,26,0,0" HorizontalAlignment="Left" Width="316" Height="85" VerticalAlignment="Top" />
+        <Button x:Name="c" Content="CONTATO" HorizontalAlignment="Left" Margin="113,133,0,0" VerticalAlignment="Top" Width="574" Height="46" Click="c_Click"/>
+        <Button x:Name="lg" Content="LISTAR GRUPOS" HorizontalAlignment="Left" Margin="113,342,0,0" VerticalAlignment="Top" Width="574" Height="46" Click="lg_Click"/>
+        <Button x:Name="lm" Content="LISTAR MEMBROS" HorizontalAlignment="Left" Margin="113,290,0,0" VerticalAlignment="Top" Width="574" Height="46" Click="lm_Click"/>
+        <Button x:Name="vcag" Content="VINCULAR CONTATO A GRUPO" HorizontalAlignment="Left" Margin="113,238,0,0" VerticalAlignment="Top" Width="574" Height="45" Click="vcag_Click"/>
+        <Button x:Name="g" Content="GRUPO" HorizontalAlignment="Left" Margin="113,185,0,0" VerticalAlignment="Top" Width="574" Height="46" Click="g_Click"/>
+    </Grid>
+</Window>

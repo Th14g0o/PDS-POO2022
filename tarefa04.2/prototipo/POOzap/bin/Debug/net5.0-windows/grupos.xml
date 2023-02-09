@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfGrupo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Grupo>
+    <Id>0</Id>
+    <Nome>toq</Nome>
+    <Descricao>fgssf</Descricao>
+    <IdMembro>0</IdMembro>
+  </Grupo>
+  <Grupo>
+    <Id>1</Id>
+    <Nome>toq</Nome>
+    <Descricao>seva</Descricao>
+    <IdMembro>0</IdMembro>
+  </Grupo>
+  <Grupo>
+    <Id>2</Id>
+    <Nome>brasi</Nome>
+    <Descricao>fgssf</Descricao>
+    <IdMembro>0</IdMembro>
+  </Grupo>
+  <Grupo>
+    <Id>3</Id>
+    <Nome>toq</Nome>
+    <Descricao>oooamabsag</Descricao>
+    <IdMembro>0</IdMembro>
+  </Grupo>
+  <Grupo>
+    <Id>4</Id>
+    <Nome>aywvhw</Nome>
+    <Descricao>jasu</Descricao>
+    <IdMembro>0</IdMembro>
+  </Grupo>
+</ArrayOfGrupo>

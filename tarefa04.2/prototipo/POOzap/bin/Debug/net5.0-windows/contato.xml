@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfContato xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Contato>
+    <Id>0</Id>
+    <Nome>th</Nome>
+    <Recado>asad&lt;3</Recado>
+    <Telefone>ssd342432</Telefone>
+  </Contato>
+  <Contato>
+    <Id>1</Id>
+    <Nome>pf</Nome>
+    <Recado>uau</Recado>
+    <Telefone>435245245</Telefone>
+  </Contato>
+  <Contato>
+    <Id>2</Id>
+    <Nome>seguio</Nome>
+    <Recado>;.,k</Recado>
+    <Telefone>353tregfdbyt666</Telefone>
+  </Contato>
+  <Contato>
+    <Id>3</Id>
+    <Nome>3rfgf</Nome>
+    <Recado>asad&lt;3</Recado>
+    <Telefone>ssd342432</Telefone>
+  </Contato>
+  <Contato>
+    <Id>4</Id>
+    <Nome>3efdsfsdfsdfsdf</Nome>
+    <Recado>asad&lt;3</Recado>
+    <Telefone>ssd342432</Telefone>
+  </Contato>
+  <Contato>
+    <Id>5</Id>
+    <Nome>thiago</Nome>
+    <Recado>...</Recado>
+    <Telefone>536545</Telefone>
+  </Contato>
+</ArrayOfContato>
