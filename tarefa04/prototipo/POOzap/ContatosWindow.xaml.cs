@@ -22,6 +22,8 @@ namespace POOzap
         public ContatosWindow()
         {
             InitializeComponent();
+            todosC.ItemsSource = null;
+            todosC.ItemsSource = NContato.Listar();
         }
         private void inserirC_Click(object sender, RoutedEventArgs e)
         {

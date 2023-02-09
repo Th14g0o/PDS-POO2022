@@ -51,16 +51,22 @@ namespace POOzap
                 if (m.IdContato == x.IdContato && x.IdGrupo ==m.IdGrupo) return m;
             return null;
         }
-        public static Membro Checar(Contato c)
+        //public static Membro Checar(Contato c)
+        //{
+            //foreach (Membro m in membros)
+                //if (m.IdContato == c.Id) return m;
+            //return null;
+        //}
+        //public static Membro Checar(Grupo g)
+        //{
+            //foreach (Membro m in membros)
+                //if (m.IdGrupo == g.Id) return m;
+            //return null;
+        //}
+        public static Membro Checar(Contato c,Grupo g)
         {
-            foreach (Membro m in membros)
-                if (m.IdContato == c.Id) return m;
-            return null;
-        }
-        public static Membro Checar(Grupo g)
-        {
-            foreach (Membro m in membros)
-                if (m.IdGrupo == g.Id) return m;
+            foreach (Membro m in membros) 
+                if (m.IdGrupo == g.Id && c.Id == m.IdContato) return m;
             return null;
         }
         public static void Atualizar(Membro m)
@@ -72,19 +78,28 @@ namespace POOzap
             obj.IdContato = m.IdContato;
             Salvar();
         }
-        public static void Excluir(Contato c)
+        //public static void Excluir(Contato c)
+        //{
+        //Abrir();
+        //Membro m = Checar(c);
+        //membros.Remove(Checar(m));
+        //Salvar();
+        //}
+        //public static void Excluir(Grupo g)
+        //{
+            //Abrir();
+            //Membro m = Checar(g);
+            //membros.Remove(Checar(m));
+            //Salvar();
+
+        //}
+        public static void Excluir(Grupo g, Contato c)
         {
             Abrir();
-            Membro m = Checar(c);
+            Membro m = Checar(c, g);
             membros.Remove(Checar(m));
             Salvar();
-        }
-        public static void Excluir(Grupo g)
-        {
-            Abrir();
-            Membro m = Checar(g);
-            membros.Remove(Checar(m));
-            Salvar();
+
         }
 
         public static void Adicionar(Contato c, Grupo g)
@@ -151,7 +166,7 @@ namespace POOzap
             {
                 foreach (Grupo g in NGrupo.Listar())
                 {
-                    if (m.IdGrupo == g.Id && m.IdContato == c.Id) gs.Add(g);
+                    if (m.IdGrupo == g.Id && m.IdContato == c.Id && gs.IndexOf(g) == -1) gs.Add(g);
                 }
             }
             

@@ -20,13 +20,16 @@ namespace POOzap
         public static void Inserir(Contato c)
         {
             Abrir();
-            contatos.Add(c);
-            Salvar();
+            if (Checar(c.Id) == null)
+            {
+                contatos.Add(c);
+                Salvar();
+            }
         }
         public static void Salvar()
         {
             XmlSerializer x = new XmlSerializer(typeof(List<Contato>));
-            StreamWriter f = new StreamWriter("./brasil", false);
+            StreamWriter f = new StreamWriter("./contato.xml", false);
             x.Serialize(f, contatos);
             f.Close();
         }
@@ -36,7 +39,7 @@ namespace POOzap
             try
             {
                 XmlSerializer x = new XmlSerializer(typeof(List<Contato>));
-                f = new StreamReader("./brasil");
+                f = new StreamReader("./contato.xml");
                 contatos = (List<Contato>)x.Deserialize(f);
             }
             catch
@@ -66,10 +69,13 @@ namespace POOzap
         {
             Abrir();
             Contato obj = Checar(c.Id);
-            obj.Nome = c.Nome;
-            obj.Recado = c.Recado;
-            obj.Telefone = c.Telefone;
-            Salvar();
+            if (obj != null)
+            {
+                obj.Nome = c.Nome;
+                obj.Recado = c.Recado;
+                obj.Telefone = c.Telefone;
+                Salvar();
+            }
         }
 
 

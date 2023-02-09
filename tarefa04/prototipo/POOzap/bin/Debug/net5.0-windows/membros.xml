@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfMembro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfMembro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Membro>
+    <Id>0</Id>
+    <IdGrupo>8</IdGrupo>
+    <IdContato>1</IdContato>
+    <Adm>false</Adm>
+  </Membro>
+</ArrayOfMembro>

@@ -20,8 +20,11 @@ namespace POOzap
         public static void Inserir (Grupo g)
         {
             Abrir();
-            grupos.Add(g);
-            Salvar();
+            if (Checar(g.Id) == null)
+            {
+                grupos.Add(g);
+                Salvar();
+            }
         }
         public static void Salvar()
         {
@@ -64,9 +67,12 @@ namespace POOzap
         {
             Abrir();
             Grupo n = Checar(g.Id);
-            n.Descricao = g.Descricao;
-            n.Nome = g.Nome;
-            Salvar();
+            if (n != null)
+            {
+                n.Descricao = g.Descricao;
+                n.Nome = g.Nome;
+                Salvar();
+            }
         }
     }
 }

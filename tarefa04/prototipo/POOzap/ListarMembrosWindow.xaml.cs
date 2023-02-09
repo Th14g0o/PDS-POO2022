@@ -46,12 +46,13 @@ namespace POOzap
         {
             try
             {
-                if (todosMG2.SelectedItem != null)
+                if (todosMG2.SelectedItem != null && todosMG1.SelectedItem != null)
                 {
+                    Grupo g = (Grupo)todosMG1.SelectedItem;
                     Contato c = (Contato)todosMG2.SelectedItem;
-                    if (c != null)
+                    if (c != null && g != null)
                     {
-                        NMembro.Excluir(c);
+                        NMembro.Excluir(g, c);
                         listarMG_Click(sender, e);
                     }
 

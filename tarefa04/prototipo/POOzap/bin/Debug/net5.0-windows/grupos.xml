@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfGrupo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Grupo>
-    <Id>1</Id>
-    <Nome>Games</Nome>
-    <Descricao>Para video jogos</Descricao>
+    <Id>7</Id>
+    <Nome>bbaas</Nome>
+    <Descricao>66363</Descricao>
+    <IdMembro>0</IdMembro>
   </Grupo>
   <Grupo>
-    <Id>2</Id>
-    <Nome>Infoweb</Nome>
-    <Descricao>Grupo dedicado a coisas foda</Descricao>
-  </Grupo>
-  <Grupo>
-    <Id>45</Id>
-    <Nome>manipoe</Nome>
-    <Descricao>eu conbgd</Descricao>
+    <Id>8</Id>
+    <Nome>fãs de nietzhsgufsdsche</Nome>
+    <Descricao>nos ajamaab</Descricao>
+    <IdMembro>0</IdMembro>
   </Grupo>
 </ArrayOfGrupo>

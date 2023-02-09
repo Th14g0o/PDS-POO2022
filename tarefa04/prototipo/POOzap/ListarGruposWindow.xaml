@@ -15,8 +15,12 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="conts"  Margin="10"/>
-        <ListBox x:Name="grups" Grid.Column="1" Margin="10"/>
+        <GroupBox Header="Contatos" Margin="10" >
+            <ListBox x:Name="conts"   BorderBrush="{x:Null}"/>
+        </GroupBox>
+        <GroupBox Header="Grupos" Margin="10" Grid.Column="1">
+            <ListBox x:Name="grups"  BorderBrush="{x:Null}"/>
+        </GroupBox>
         <Button x:Name="listar" Content="LISTAR" Grid.Column="0" Grid.Row="1" Margin="10" Click="listar_Click" />
         <Button x:Name="sair" Content="SAIR DO GRUPO" Grid.Column="1" Grid.Row="1" Margin="10" Click="sair_Click" />
     </Grid>

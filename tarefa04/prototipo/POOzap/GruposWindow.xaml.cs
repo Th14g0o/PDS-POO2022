@@ -22,6 +22,8 @@ namespace POOzap
         public GruposWindow()
         {
             InitializeComponent();
+            todosG.ItemsSource = null;
+            todosG.ItemsSource = NGrupo.Listar();
         }
 
         private void inserir_Click(object sender, RoutedEventArgs e)

@@ -15,8 +15,12 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Name="grupos" Grid.Row="0" Grid.Column="0" Margin="15px"/>
-        <ListBox Name="contatos" Grid.Row="0" Grid.Column="1" Margin="15px"/>
+        <GroupBox Header="Grupos"  Margin="10px" Grid.Column="0">
+            <ListBox Name="grupos" Grid.Row="0" BorderBrush="{x:Null}" />
+        </GroupBox>
+        <GroupBox Header="Contatos" Margin="10px" Grid.Column="1">
+            <ListBox Name="contatos" Grid.Row="0" BorderBrush="{x:Null}" />
+        </GroupBox>
         <Button Name="vincular" Content="VINCULAR" Grid.Row="1" Grid.Column="0" Margin="15px" Grid.ColumnSpan="2" Click="vincular_Click"/>
         
     </Grid>

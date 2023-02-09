@@ -41,12 +41,13 @@ namespace POOzap
 
         private void sair_Click(object sender, RoutedEventArgs e)
         {
-            if (grups.SelectedItem != null)
+            if (grups.SelectedItem != null && conts.SelectedItem != null)
             {
                 Grupo g = (Grupo)grups.SelectedItem;
-                if (g != null)
+                Contato c = (Contato)conts.SelectedItem;
+                if (g != null && c != null)
                 {
-                    NMembro.Excluir(g);
+                    NMembro.Excluir(g, c);
                     listar_Click(sender, e);
                 }
             }
