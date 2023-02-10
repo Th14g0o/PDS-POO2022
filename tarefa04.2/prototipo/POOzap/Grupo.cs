@@ -14,7 +14,7 @@ namespace POOzap
         public int IdMembro { get; set;}
         public override string ToString()
         {
-            return $"[{Id}] {Nome} - {Descricao}";
+            return $"{Nome} - {Descricao}";
         }
     }
 }

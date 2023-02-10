@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\20211011110014\\Downloads\\tarefa04\\prototipo\\POOzap\\POOzap.csproj": {}
+    "C:\\Users\\20211011110014\\Downloads\\prototipo\\POOzap\\POOzap.csproj": {}
   },
   "projects": {
-    "C:\\Users\\20211011110014\\Downloads\\tarefa04\\prototipo\\POOzap\\POOzap.csproj": {
+    "C:\\Users\\20211011110014\\Downloads\\prototipo\\POOzap\\POOzap.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\20211011110014\\Downloads\\tarefa04\\prototipo\\POOzap\\POOzap.csproj",
+        "projectUniqueName": "C:\\Users\\20211011110014\\Downloads\\prototipo\\POOzap\\POOzap.csproj",
         "projectName": "POOzap",
-        "projectPath": "C:\\Users\\20211011110014\\Downloads\\tarefa04\\prototipo\\POOzap\\POOzap.csproj",
+        "projectPath": "C:\\Users\\20211011110014\\Downloads\\prototipo\\POOzap\\POOzap.csproj",
         "packagesPath": "C:\\Users\\20211011110014\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\20211011110014\\Downloads\\tarefa04\\prototipo\\POOzap\\obj\\",
+        "outputPath": "C:\\Users\\20211011110014\\Downloads\\prototipo\\POOzap\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\20211011110014\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     }

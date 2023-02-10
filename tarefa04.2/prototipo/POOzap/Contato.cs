@@ -14,7 +14,7 @@ namespace POOzap
         public string Telefone { get; set; }
         public override string ToString()
         {
-            return $"[{Id}] {Nome} - {Recado} - {Telefone}";
+            return $"{Nome} - {Recado} - {Telefone}";
         }
     }
 }

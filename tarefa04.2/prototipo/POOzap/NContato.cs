@@ -11,6 +11,7 @@ namespace POOzap
     internal static class NContato
     {
         private static List<Contato> contatos = new List<Contato>();
+        public static int x = 0;
         public static List<Contato> Listar()
         {
             Abrir();
@@ -20,13 +21,6 @@ namespace POOzap
         public static void Inserir(Contato c)
         {
             Abrir();
-            int x = 0;
-            foreach (Contato t in contatos)
-                t.Id = 0;
-            foreach (Contato t in contatos)
-            {
-                t.Id = x++;
-            }
             c.Id = x++;
             contatos.Add(c);
             Salvar();
@@ -68,6 +62,11 @@ namespace POOzap
         {
             Abrir();
             contatos.Remove(Checar(c.Id));
+            foreach(Membro m in NMembro.Listar())
+            {
+                if (m.IdContato == c.Id)
+                    NMembro.Excluir(m);
+            }
             Salvar();
         }
 

@@ -11,6 +11,7 @@ namespace POOzap
     internal static class NGrupo
     {
         private static List<Grupo> grupos = new List<Grupo>();
+        private static int x = 0;
         public static List<Grupo> Listar()
         {
             Abrir();
@@ -20,13 +21,6 @@ namespace POOzap
         public static void Inserir (Grupo g)
         {
             Abrir();
-            int x = 0;
-            foreach (Grupo t in grupos)
-                t.Id = 0;
-            foreach(Grupo t in grupos)
-            {
-                t.Id = x++;
-            } 
             g.Id = x++;
             grupos.Add(g);
             Salvar();
@@ -65,6 +59,11 @@ namespace POOzap
         public static void Excluir(Grupo g)
         {
             Abrir();
+            foreach (Membro m in NMembro.Listar())
+            {
+                if (m.IdGrupo == g.Id)
+                    NMembro.Excluir(m);
+            }
             grupos.Remove(Checar(g.Id));
             Salvar();
         }

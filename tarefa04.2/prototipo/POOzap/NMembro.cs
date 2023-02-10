@@ -69,6 +69,7 @@ namespace POOzap
                 if (m.IdGrupo == g.Id && c.Id == m.IdContato) return m;
             return null;
         }
+
         public static void Atualizar(Membro m)
         {
             Abrir();
@@ -101,6 +102,13 @@ namespace POOzap
             Salvar();
 
         }
+        public static void Excluir(Membro m)
+        {
+            Abrir();
+            membros.Remove(Checar(m));
+            Salvar();
+
+        }
 
         public static void Adicionar(Contato c, Grupo g)
         {
@@ -109,8 +117,7 @@ namespace POOzap
             int n = 0;
             foreach (Membro x in membros)
             {
-                if (m.IdContato == x.IdContato && m.IdGrupo == x.IdGrupo
-                    )
+                if (m.IdContato == x.IdContato && m.IdGrupo == x.IdGrupo)
                 {
                     n++;
                     break;

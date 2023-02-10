@@ -31,9 +31,11 @@ namespace POOzap
         {
             try
             {
+                
                 Grupo g = (Grupo) grupos.SelectedItem;
                 Contato c = (Contato) contatos.SelectedItem;
-                NMembro.Adicionar(c, g);
+                if (g!=null && c!=null)
+                    NMembro.Adicionar(c, g);
             }
             catch
             {
